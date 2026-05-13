@@ -86,6 +86,18 @@ def clean_title(raw_title: str, artist_name: str | None) -> str:
     return title[:100] or "untitled soundcloud track"
 
 
+def sanitize_youtube_title(title: str) -> str:
+    # YouTube rejects empty titles and some control/special characters.
+    title = title.replace("\n", " ").replace("\r", " ").replace("\t", " ")
+    title = re.sub(r"[<>]", "", title)
+    title = re.sub(r"\s+", " ", title).strip()
+
+    if not title:
+        raise RuntimeError("YouTube title became empty after sanitizing.")
+
+    return title[:100]
+
+
 def choose_youtube_title(track_title: str, artist_name: str) -> str:
     artist_name = artist_name.strip() or "unknown artist"
 
@@ -103,15 +115,15 @@ def choose_youtube_title(track_title: str, artist_name: str) -> str:
         choice = input("Pick 1, 2, or 3 [1]: ").strip() or "1"
 
         if choice == "1":
-            return option_1[:100]
+            return sanitize_youtube_title(option_1)
 
         if choice == "2":
-            return option_2[:100]
+            return sanitize_youtube_title(option_2)
 
         if choice == "3":
             custom = input("Custom title: ").strip()
             if custom:
-                return custom[:100]
+                return sanitize_youtube_title(custom)
             print("Title cannot be empty.")
             continue
 
@@ -581,6 +593,9 @@ def main() -> None:
         soundcloud_url=args.soundcloud_url,
         artist_url=artist_url,
     )
+
+    youtube_title = sanitize_youtube_title(youtube_title)
+    print(f"Final YouTube title being uploaded: {youtube_title!r}")
 
     print("Uploading to YouTube.")
 
