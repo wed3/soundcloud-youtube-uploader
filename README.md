@@ -1,14 +1,14 @@
 # SoundCloud to YouTube Uploader
 
-A Python command-line tool that uploads a permitted SoundCloud track to YouTube as a static cover-art video.
+A Python command line tool that uploads a SoundCloud track to YouTube as a static cover art video.
 
-It can fetch SoundCloud metadata, download the best available audio, render a cover-art video, upload to YouTube, set the thumbnail, and clean up temporary files afterward.
+It can fetch SoundCloud metadata, download the best available audio, render a cover art video, upload to YouTube, and set the thumbnail.
 
 ## Important
 
 Only upload tracks you own or have explicit permission to repost.
 
-This tool does not grant rights to upload copyrighted music. It only automates the upload workflow for permitted reposts.
+This tool does not grant rights to upload copyrighted music.
 
 ## Disclaimer
 
