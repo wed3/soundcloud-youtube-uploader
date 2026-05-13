@@ -50,7 +50,7 @@ sudo pacman -S ffmpeg python-virtualenv
 ## Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/soundcloud-youtube-uploader.git
+git clone https://github.com/wed3/soundcloud-youtube-uploader.git
 cd soundcloud-youtube-uploader
 
 python -m venv .venv
