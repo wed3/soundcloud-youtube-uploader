@@ -41,7 +41,7 @@ Python dependencies:
 pip install -r requirements.txt
 ```
 
-On Arch/CachyOS:
+On Arch:
 
 ```bash
 sudo pacman -S ffmpeg python-virtualenv
