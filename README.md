@@ -10,6 +10,11 @@ Only upload tracks you own or have explicit permission to repost.
 
 This tool does not grant rights to upload copyrighted music. It only automates the upload workflow for permitted reposts.
 
+## Disclaimer
+
+This project was largely vibecoded and should be treated as a practical automation script rather than polished production software. Review the code before using it, especially the OAuth, upload, and file-cleanup behavior.
+
+
 ## Features
 
 - Fetches SoundCloud title, uploader, artist URL, and cover art
