@@ -5,3 +5,5 @@ out/
 token.json
 client_secret.json
 *.log
+
+*.bak
