@@ -12,7 +12,7 @@ This tool does not grant rights to upload copyrighted music.
 
 ## Disclaimer
 
-This project was largely vibecoded and should be treated as a practical automation script rather than polished production software. Review the code before using it, especially the OAuth, upload, and file-cleanup behavior.
+This project was largely vibecoded and should be treated as a practical automation script rather than polished production software. Review the code before using it, especially the OAuth and upload behavior.
 
 
 ## Features
