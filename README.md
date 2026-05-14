@@ -19,13 +19,11 @@ This project was largely vibecoded and should be treated as a practical automati
 
 - Fetches SoundCloud title, uploader, artist URL, and cover art
 - Downloads best available SoundCloud audio with `yt-dlp`
-- Supports local artist-provided WAV/FLAC/MP3 files with `--audio`
-- Renders a YouTube-ready video with `ffmpeg`
+- Supports local artist provided WAV/FLAC/MP3 files with `--audio`
+- Renders a video with `ffmpeg`
 - Uploads to YouTube using OAuth
 - Sets the YouTube thumbnail
 - Supports public, unlisted, and private uploads
-- Deletes temporary files after a successful upload
-- Supports `--keep-temp` for debugging
 
 ## Requirements
 
