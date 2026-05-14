@@ -188,8 +188,7 @@ def make_cover_image(
     For square cover art:
       1920x1080 video frame -> 1080x1080 cover centered on black
       1280x720 thumbnail    -> 720x720 cover centered on black
-
-    No cropping. No stretching. Side bars are expected for square art.
+      
     """
     source = Image.open(cover_path).convert("RGB")
     background = Image.new("RGB", size, (0, 0, 0))
